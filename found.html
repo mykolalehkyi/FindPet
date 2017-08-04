@@ -1,0 +1,78 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Found Pet</title>
+    <style>
+    h2 {
+        padding-top: 50px;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        
+        <ul>
+            <li class="logo" onclick="window.location.href='index.html'">Find A Pet</li>
+            <li class="found" onclick="changePage('true')">Found</li>
+            <li class="not__found" onclick="changePage('false')">Not Found</li>
+        </ul>
+    </div>
+    <div class="wrap__found__dog" id="out"></div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+         <script src="script.js"></script>
+        <script type="text/javascript">
+    
+
+
+    
+    var pageFound="true";
+        var pets=0;
+        $.ajax("https://api.myjson.com/bins/t2n4x")
+        .done(getdata)
+        .fail(function() {
+        console.log("error")})
+        .always(function() {
+        console.log("complete")});
+
+function changePage(a) {
+    pageFound=a;
+    sortPets();
+}
+function getdata(data) {
+    pets=data;
+    sortPets();
+    
+}
+function sortPets() {
+var currentPet=0,line="";
+for (var i = 0; i < pets.length; i++) {
+    currentPet= pets[i];
+    if (currentPet["pageFound"]==pageFound) {
+    line+='<div class="petsInfo"><img style="float:left"src='+currentPet["img"]+'>';
+    line+='<div class="desc"> <span class="name"><h3>'+currentPet["name"]+'</h3>';
+    line+='<h5>Pet owner: '+currentPet["nameOwner"]+'</h5>';
+    line+='<h5>Pet color: '+currentPet["color"]+'</h5>';
+    line+='<h5>Status: '+currentPet["status"]+'</h5>';
+    line+='<br></span>';
+    line+=currentPet["desc"];
+    line+='</div>';
+    line+='<input type="button" class="btn-6d" style="width=40; heigth=20px" value="Learn more">';
+    line+='</div>';
+    }
+}
+
+document.getElementById("out").innerHTML= line;
+ $('.wrap__found__dog  > .petsInfo').click(function () {
+                $(this).css('background-color', 'blue');
+                alert("hi");
+
+            })
+} 
+
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+/*body {
+    background-color: lightgreen;
+}*/
+.wrapper { 
+    width: 700px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.inputFields {
+    width: 1000px;
+    height: 100px;
+    margin: 250px auto;
+    margin-bottom: 100px;
+}
+
+.reg__form>form {
+    width: 250px;
+    margin: 25px auto;
+    line-height: 35px;
+}
+
+.np {
+    border: none;
+    border-bottom: 2px solid rgba(53, 130, 255, 0.4);
+    outline: none;
+}
+
+input {
+    background: none;
+    color: #126699;
+}
+
+.reg__form {
+    background-color: rgba(222, 237, 175, 0.5);
+}
+
+.findPet,
+.regPet,
+.regPet__span {
+    color: #b0bc85;
+    font-family: 'Raleway', sans-serif;
+    text-indent: 10px;
+    font-size: 30px;
+    border: 0px;
+    background-color: rgb(238, 249, 204);
+    outline: none;
+}
+
+input::-webkit-input-placeholder {
+    color: rgba(144, 238, 144, 0.7);
+}
+
+.findPet {
+    transition: .4s ease all;
+    width: 400px;
+    height: 100px;
+    float: left;
+}
+
+.regPet {
+    transition: .5s ease;
+    float: left;
+    width: 150px;
+    height: 100px;
+    text-indent: 0px;
+    cursor: pointer;
+}
+
+.regPet__span {
+    float: left;
+    padding-top: 30px;
+    width: 400px;
+    height: 100px;
+    display: none;
+}
+
+.regPet:hover {
+    border: 1px solid lightgreen;
+}
+
+.reg__form {
+    display: none;
+    border: 1px solid black;
+    width: 100%;
+    min-height: 600px;
+}
+
+
+/* FORMS */
+
+#name::-webkit-input-placeholder,
+#tel::-webkit-input-placeholder,
+#surname::-webkit-input-placeholder {
+    color: grey;
+}
+
+#name,
+#tel,
+#surname,
+#checkboxCities {
+    margin: 10px 0 10px 0;
+}
+
+.sl__form {
+    border: 1px solid rgba(53, 130, 255, 0.4);
+    border-radius: 25px;
+    outline: none;
+}
+
+label {
+    color: #545947;
+}
+
+.sb {
+    border: 1px solid lightgreen;
+    font-size: 25px;
+    padding: 5px;
+    outline: none;
+    cursor: pointer
+}
+
+.sb:hover {
+    background-color: grey;
+    transition: 1s ease all;
+}
+
+
+/* Header */
+.header{
+    width: 100%;
+    height: 70px;
+    background-color: lightblue;
+}
+a {text-decoration: none;}
+.logo {
+    color: #fff;    
+    float: left;
+    height: 70px;
+    width: 100px;
+    padding: 20px 10px 0 10px;
+}
+
+.found {
+    padding: 20px 10px 5px 10px;
+    float: right;
+}
+
+.not__found {
+    padding: 20px 10px 0 10px;
+    float: right;
+}
+
+.found:hover,
+.not__found:hover {
+    border: 1px solid green; 
+    cursor: pointer;
+    color: greenyellow;
+}
+
+.logo:hover {
+    cursor: pointer;
+    color: greenyellow;
+}
+
+.header > ul > li {
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+    display: inline;
+    margin-right: 25px;
+    width: 150px;
+    height: 70px;
+    font-size: 25px;
+    
+}
+
+
+/* End of header */
+
+/* Found.HTML */
+.wrap__notFound__dog,
+.wrap__found__dog {
+    align-content: space-between;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrap__found__dog > div {
+    padding: 15px;
+    width: 360px;
+    min-height: 200px;
+    margin: 10px;
+    border: 2px solid lightblue;
+    border-radius: 3%;
+    list-style: none;  
+}
+.desc {
+    padding: 0px 10px;
+    float: right;
+    margin-left: 5px;
+    width: 220px;
+    height: 170px;
+    overflow-x: hidden;
+}
+.btn-6d {
+    float: left;
+    border: 2px solid #ffffff;
+    font-size: 30px;
+    
+    background: lightblue;
+    color: white;
+    margin-left: 100px;
+}
+ 
+.btn-6d:hover {
+    transition-duration: 0.4s;
+    /*background: transparent;*/
+    color: green;
+    background: lightgreen;
+    cursor: pointer;
+}
+
+.wrap__found__dog img {
+    width: 100px;
+    height: 100 px;
+}
+
+/* End of Found.HTML */

@@ -1,0 +1,69 @@
+<!Doctype html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>  
+ 
+<div class="wrapper">
+<div class="main">
+    <!-- LOGO -->
+<div class="logo"></div>
+<!-- LOGO -->
+
+<!-- Input Fields -->
+<div class="inputFields" >
+    <input type="text" class='findPet' onkeydown="check()" placeholder="Write down name of ur pet" >
+    <button class="regPet" onclick="show()">Reg Pet</button>
+    <span class="regPet__span ">Register your stolen pet</span>
+    <input type="button" class="btn-6d" style="width: 550px;
+height: 100px;"value="Visit our main page" onclick="window.location.href='main.html'">
+</div>
+<!-- Input Fields -->
+<!-- Registration form -->
+<div class="reg__form">
+    <form action="index.html">
+
+        <label for="name">Pet name :</label>
+        <input type="text" id="name" class="np" placeholder="Murzik" onkeydown="takeInfo()" value=" "><br>
+
+        <label for="nameOwner">Write your name  :</label>
+        <input type="text" id="nameOwner" class="np" placeholder="John" onkeydown="takeInfo()"><br>
+
+
+        <label for="petColor">Pet color :</label><br>
+        <input type="text" id="petColor " class="np" placeholder="John" onkeydown="takeInfo()"><br>
+
+        <label for="desc">Desc. your pet  :</label>
+        <textarea id='desc' onkeydown="takeInfo()"></textarea><br>
+
+        <label for="tel">Write your mobile phone :</label>
+        <input type="tel" id="tel" class="np" placeholder="0984785746" onkeydown="takeInfo()"><br>
+    
+        <label for="street">Where your pet was stolen :</label>
+        <input type="text" id='street' class="np" placeholder="Street" onkeydown="takeInfo()"><br>
+
+
+        <label for="checkboxCities">Select your city :</label>
+        <select class="sl__form" id="checkboxCities" onkeydown="takeInfo()">
+            <option>Kiev</option>
+            <option>Kharkiv</option>
+            <option>Dnipro</option>
+            <option>odessa</option>
+        </select ><br>
+         <input type="button" class="sb" id="mapsearch" value="Submit" onclick="acceptForm()">
+    </form>
+</div>
+    <!-- ENF OF Registration form -->
+</div>
+</div>
+    <script src=" script.js "></script>
+</body>
+
+</html>
